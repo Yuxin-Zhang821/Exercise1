@@ -1,7 +1,7 @@
 ```{r}
 library(dplyr)
-min_weight_by_feed <- function(data) {
-   data %>%
+min_weight_by_feed <- function(data_new) {
+   data_new %>%
    group_by(feed) %>%
    summarise(min_weight=min(weight, na.rm = TRUE))
   } 
