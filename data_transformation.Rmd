@@ -1,0 +1,12 @@
+```{r}
+library(dplyr)
+max_weight_by_feed <- function(data) {
+   data %>%
+   group_by(feed) %>%
+   summarise(max_weight=max(weight, na.rm = TRUE))
+  } 
+transformed_data <- max_weight_by_feed(chickwts)
+print(transformed_data)
+
+```
+
