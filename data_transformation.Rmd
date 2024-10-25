@@ -1,11 +1,11 @@
 ```{r}
 library(dplyr)
-max_weight_by_feed <- function(data) {
+min_weight_by_feed <- function(data) {
    data %>%
    group_by(feed) %>%
-   summarise(max_weight=max(weight, na.rm = TRUE))
+   summarise(min_weight=min(weight, na.rm = TRUE))
   } 
-transformed_data <- max_weight_by_feed(chickwts)
+transformed_data <- min_weight_by_feed(chickwts)
 print(transformed_data)
 
 ```
